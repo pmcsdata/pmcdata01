@@ -55,7 +55,7 @@ input, textarea {
 }
 
 #submit:hover {
-    background-color: #333333;
+    background-color: #ffd966;
 }
 
 /* Media query for smaller screens */
@@ -77,3 +77,4 @@ input, textarea {
         padding: 8px; /* Adjust padding */
     }
 }
+
