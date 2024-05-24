@@ -1,45 +1,59 @@
-*{
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
-	font-family: 'poppins', sans-serif;
-	font-size: 18px;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px; /* Reduced font size for better readability on smaller screens */
 }
-body{
-	height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0; /* Added background color for better contrast */
+    padding: 10px; /* Added padding for small screens */
 }
-.container{
-	width: 500px;
-	padding: 30px;
-	border: 1px solid #eeeeee;
-	border-radius: 10px;
-	background-color: #003b5b;
+
+.container {
+    width: 100%; /* Use full width available */
+    max-width: 400px; /* Set a maximum width for larger screens */
+    padding: 20px; /* Reduced padding for better fit on small screens */
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    background-color: #003b5b;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Added subtle shadow for better appearance */
 }
-h4{
-	margin-bottom: 10px;
-	font-size: 24px;
-	color: white;
+
+h4 {
+    margin-bottom: 10px;
+    font-size: 20px; /* Reduced font size for better readability */
+    color: white;
+    text-align: center; /* Centered text for better presentation */
 }
-input{
-	width: 100%;
-	padding: 10px;
-	margin-bottom: 10px;
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px; /* Match font size with global settings */
+    border-radius: 5px; /* Added border-radius for consistency */
+    border: 1px solid #cccccc; /* Added border for better input field visibility */
 }
-textarea{
-	width: 100%;
-	padding: 10px;
+
+#submit {
+    border: none;
+    background-color: orangered;
+    color: white;
+    width: 100%; /* Make the button full width */
+    max-width: 200px; /* Set a maximum width for larger screens */
+    padding: 10px; /* Added padding for better touch target */
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer; /* Added cursor pointer for better UX */
+    transition: background-color 0.3s; /* Added transition for smooth hover effect */
 }
-#submit{
-	border: none;
-	background-color: orangered;
-	color: white;
-	width: 200px;
-	margin-top: 10px;
-	border-radius: 5px;
-}
-#submit:hover{
-	background-color: #333333;
+
+#submit:hover {
+    background-color: #333333;
 }
