@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h3>Heating Control</h3>
+    <button onclick="insertRow()">Turn Heating On</button>
+
+    <p id="confirmation"></p>
+
+    <script>
+      function insertRow() {
+        const url = "https://script.google.com/macros/s/AKfycbxLBR95dOa2rVrjjtI2m2okwWuPxLu0twp1EQgOZuIT6JD6-yWkj8ml48WqhJhXnykq/exec"; // Replace with your deployment URL
+
+        fetch(url, { method: "GET" })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return response.json();
+          })
+          .then((data) => {
+            if (data.status === "success") {
+              document.getElementById("confirmation").textContent = data.message;
+            } else {
+              document.getElementById("confirmation").textContent =
+                "Error: " + data.message;
+            }
+          })
+          .catch((error) => {
+            document.getElementById("confirmation").textContent =
+              "Error: " + error.message;
+          });
+      }
+    </script>
+  </body>
+</html>
